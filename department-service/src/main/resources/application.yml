@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: DEPARTMENT-SERVICE
+  zipkin:
+    base-url: http://127.0.0.19411/
+  datasource:
+    url: jdbc:mysql://localhost/department
+    username: maya
+    password: maya
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximumPoolSize: 10
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+server:
+  port: 8007
